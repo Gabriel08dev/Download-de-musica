@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mp3download</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>mp3download</h1>
+      <p>Converta vídeos ou playlists do YouTube para MP3.</p>
+    </header>
+    <form id="download-form">
+      <label for="url">Link do vídeo ou playlist</label>
+      <input id="url" name="url" type="url" placeholder="https://www.youtube.com/watch?v=..." required>
+      <label class="option"><input id="playlist" name="playlist" type="checkbox"> Baixar playlist completa (até 100 itens)</label>
+      <button type="submit">Iniciar download</button>
+    </form>
+    <section id="result" aria-live="polite" hidden>
+      <h2 id="status">Aguardando</h2>
+      <progress id="progress" max="100" value="0"></progress>
+      <p id="message"></p>
+      <a id="download-all" class="download-all" hidden>Baixar todos em ZIP</a>
+      <ul id="files"></ul>
+    </section>
+  </main>
+</body>
+</html>
